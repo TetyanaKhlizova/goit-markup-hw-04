@@ -6,6 +6,7 @@
   --accent-color: #2196f3;
   --btn-color: #188ce8;
   --bkground-color-title: #2f303a;
+  --bkground-color-title-second: #c4c4c4;
   --bkground-color-teamandbtn: #f5f4fa;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --header-line-color: #ececec;
@@ -152,11 +153,22 @@ body {
 .hero {
   display: flex;
   height: 600px;
-  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--bkground-color-title);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Fotohero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
 }
+
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -188,7 +200,6 @@ body {
 .hero-container {
   max-width: 696px;
   text-align: center;
-  /*padding: 200px 0;*/
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -288,7 +299,7 @@ img {
 }
 .position {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
@@ -306,7 +317,25 @@ img {
 }
 
 .team-card-content {
-  padding: 30px 0;
+  padding: 30px 32px;
+}
+.social-item {
+  height: 44px;
+  width: 44px;
+}
+.social-link {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  background: teal /*var(--title-color)*/;
+}
+.team-social {
+  display: flex;
+  justify-content: center;
+}
+.social-item + .social-item {
+  margin-left: 10px;
 }
 .team-card {
   background: var(--title-color);
@@ -330,7 +359,7 @@ img {
 
 .location,
 .contact-footer {
-  display: inline-block;
+  display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -348,6 +377,27 @@ img {
 .loc-footer,
 .mail-footer {
   margin-bottom: 9px;
+}
+.join {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-color);
+  margin: 0 0 20px 0;
+}
+.contact-section-footer-general {
+  display: flex;
+  align-items: baseline;
+}
+.contact-section-footer {
+  width: 231px;
+  margin-right: 70px;
+}
+.join-contact-section {
+  width: 206px;
+  margin: 0;
 }
 
 /*main portfolio section*/
