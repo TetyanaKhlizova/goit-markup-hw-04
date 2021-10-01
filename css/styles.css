@@ -8,6 +8,8 @@
   --bkground-color-title: #2f303a;
   --bkground-color-title-second: #c4c4c4;
   --bkground-color-teamandbtn: #f5f4fa;
+  --social-icon-color: #afb1b8;
+  --footer-icon-bcgcolor: #44454e;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --header-line-color: #ececec;
   --border-portfolio-card: #eeeeee;
@@ -328,7 +330,21 @@ img {
   width: 100%;
   display: block;
   border-radius: 50%;
-  background: teal /*var(--title-color)*/;
+  background-color: var(--title-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-link:hover .social-icon-hover,
+.social-link:focus .social-icon-hover {
+  fill: var(--title-color);
+}
+.social-link:focus {
+  background-color: var(--accent-color);
 }
 .team-social {
   display: flex;
@@ -337,8 +353,23 @@ img {
 .social-item + .social-item {
   margin-left: 10px;
 }
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-icon-color);
+}
+.social-footer-link {
+  background-color: var(--footer-icon-bcgcolor);
+}
+.social-footer-link:hover,
+.social-footer-link:focus {
+  background-color: var(--accent-color);
+}
+.footer-social-icon {
+  fill: var(--title-color);
+}
 .team-card {
-  background: var(--title-color);
+  background-color: var(--title-color);
   box-shadow: var(--box-shadow);
   border-radius: 0px 0px 4px 4px;
 }
