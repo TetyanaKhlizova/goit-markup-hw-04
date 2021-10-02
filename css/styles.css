@@ -151,7 +151,21 @@ body {
 .contact {
   display: flex;
 }
+.header-icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
 
+.header-icon-smartphone {
+  width: 10px;
+  height: 12px;
+  margin-right: 10px;
+}
+.header-icon-envelope,
+.header-icon-smartphone {
+  fill: currentColor;
+}
 /*main studio section*/
 
 .hero {
